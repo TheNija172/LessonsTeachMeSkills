@@ -18,6 +18,7 @@ public class Main {
                 System.out.println("3. Задание 4");
                 System.out.println("4. Задание 5");
                 System.out.println("5. Задание 6");
+                System.out.println("6. Задание *");
 
 
                 while (!scanner.hasNextInt()) {
@@ -28,20 +29,14 @@ public class Main {
                 menu = scanner.nextInt();
 
                 switch (menu) {
-                    case 0 -> {
-                        return;
-                    }
+                    case 0 -> {return;}
                     case 1 -> FirstTask(array);
                     case 2 -> SecondAndThirdTask(array);
                     case 3 -> FourthTask(array);
                     case 4 -> FifthTask(array);
                     case 5 -> SixthTask(array);
-
-
-
-                    default -> {
-
-                    }
+                    case 6 -> SeventhTask(array);
+                    default -> {}
                 }
             }
         }
@@ -104,7 +99,7 @@ public class Main {
 
     //-----Task 5-----
     public static void FifthTask(int[] array) {
-        for (int i = 0; i < array.length/2; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - 1 - i];
             array[array.length - 1 - i] = temp;
@@ -114,19 +109,43 @@ public class Main {
 
 
     //-----Task 6-----
-    public static void SixthTask(int[] array)
-    {
+    public static void SixthTask(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > array[i-1])
+            if (array[i] > array[i - 1])
                 continue;
-            else
-            {
+            else {
                 System.out.println("Массив не возрастающий");
                 return;
             }
         }
         System.out.println("Массив возрастающий");
     }
+
+
+    //-----Task 7-----
+    public static void SeventhTask(int[] array) {
+        array[array.length-1] += 1;
+        if(array.length == 1) return;
+        for(int i= array.length-1; i >= 0; i--)
+        {
+            if (array[i] < 10)
+                break;
+            else if (i > 0 )
+            {
+                array[i] = 0;
+                array[i - 1] += 1;
+            }
+            else if (i == 0)
+            {
+                int[] tempArray = new int[array.length + 1];
+                tempArray[0] = 1;
+                System.out.println(Arrays.toString(tempArray));
+                return;
+            }
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
 
     //-----Creating array-----
     public static int[] creatingArray(Scanner scanner) {
