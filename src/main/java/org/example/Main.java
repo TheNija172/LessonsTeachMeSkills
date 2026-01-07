@@ -4,91 +4,50 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {
-            FirstTask(sc);
-            SecondTask(sc);
-            ThirdTask();
-            FourthTask();
-            FifthTask(sc);
-        }
-    }
+        int menu;
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (true) {
+                System.out.println("Выберите действие: ");
+                System.out.println("0. Выход");
+                System.out.println("1. Задание 1");
+                System.out.println("2. Задание 2");
+                System.out.println("3. Задание 3");
+                System.out.println("4. Задание 4");
+                System.out.println("5. Задание 5");
 
-    //----------Task 1----------
-    private static void FirstTask(Scanner sc) {
-        System.out.print("Введите число: ");
-        while (!sc.hasNextInt()) {
-            System.out.print("Повторите ввод значения: ");
-            sc.next();
-        }
+                menu = scanner.nextInt();
+                while (!scanner.hasNextInt())
+                {
+                    System.out.println("Неверный ввод данных");
+                    scanner.next();
+                }
 
-        if (sc.nextInt() % 2 == 0)
-            System.out.println("Число чётное");
-        else
-            System.out.println("Число нечётное");
-        System.out.println();
-    }
+                switch (menu) {
+                    case 0 -> {
+                        return;
+                    }
+                    case 1 -> {
+                        //ggg
+                    }
+                    case 2 -> {
 
-    //-----------Task 2-----------
-    private static void SecondTask(Scanner sc) {
-        System.out.print("Введите температуру: ");
+                    }
+                    case 3 -> {
 
-        while (!sc.hasNextInt()) {
-            System.out.print("Повторите ввод значения: ");
-            sc.next();
-        }
+                    }
+                    case 4 -> {
 
-        int temperature = sc.nextInt();
+                    }
+                    case 5 -> {
 
-        if (temperature <= -20)
-            System.out.println("Холодная погода");
-        else if (temperature > -5)
-            System.out.println("Теплая погода");
-        else
-            System.out.println("Нормальная погода");
-        System.out.println();
-    }
+                    }
+                    default -> {
 
-    //------Task 3------
-    private static void ThirdTask() {
-        System.out.print("Квадраты чисел от 10 до 20: ");
-        for (int i = 10; i <= 20; i++) {
-            System.out.print((i * i) + " ");
-        }
-        System.out.println('\n');
-
-    }
-
-    //------Task 4------
-    private static void FourthTask() {
-        System.out.print("Числа от 7 до 98: ");
-        for (int i = 7; i < 100; i += 7) {
-            System.out.print(i + " ");
-        }
-        System.out.println('\n');
-    }
-
-    //------Task 5------
-    private static void FifthTask(Scanner sc) {
-        int value;
-        int sum = 0;
-        System.out.print("Введите целочисленное число: ");
-
-        while (true) {
-            if (sc.hasNextInt()) {
-                value = sc.nextInt();
-                if (value < 0) {
-                    System.out.print("Повторите ввод значения: ");
-                    continue;
-                } else
-                    break;
+                    }
+                }
             }
-            System.out.print("Повторите ввод значения: ");
-            sc.next();
         }
-
-        for (int i = 1; i <= value; i++) {
-            sum += i;
-        }
-        System.out.println("Сумма чисел: " + sum);
     }
+
+
 }
