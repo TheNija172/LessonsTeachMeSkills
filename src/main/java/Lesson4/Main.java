@@ -1,4 +1,4 @@
-package org.example;
+package Lesson4;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -135,7 +135,7 @@ public class Main {
                 array[i] = 0;
                 array[i - 1] += 1;
             }
-            else if (i == 0)
+            else
             {
                 int[] tempArray = new int[array.length + 1];
                 tempArray[0] = 1;
@@ -186,9 +186,8 @@ public class Main {
                     }
                     return array;
                 }
-                default -> {
-                    System.out.println("Повторите ввод: ");
-                }
+                default -> System.out.println("Повторите ввод: ");
+
             }
         }
     }
