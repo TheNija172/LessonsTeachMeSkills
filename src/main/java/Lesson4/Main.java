@@ -30,12 +30,12 @@ public class Main {
 
                 switch (menu) {
                     case 0 -> {return;}
-                    case 1 -> FirstTask(array);
-                    case 2 -> SecondAndThirdTask(array);
-                    case 3 -> FourthTask(array);
-                    case 4 -> FifthTask(array);
-                    case 5 -> SixthTask(array);
-                    case 6 -> SeventhTask(array);
+                    case 1 -> firstTask(array);
+                    case 2 -> secondAndThirdTask(array);
+                    case 3 -> fourthTask(array);
+                    case 4 -> fifthTask(array);
+                    case 5 -> sixthTask(array);
+                    case 6 -> seventhTask(array);
                     default -> {}
                 }
             }
@@ -44,7 +44,7 @@ public class Main {
 
 
     //-----Task 1-----
-    public static void FirstTask(int[] array) {
+    public static void firstTask(int[] array) {
 
         System.out.print("В прямом порядке: [ ");
         for (int element : array) {
@@ -59,7 +59,7 @@ public class Main {
     }
 
     //-----Task 2+3-----
-    public static void SecondAndThirdTask(int[] array) {
+    public static void secondAndThirdTask(int[] array) {
         int maxElement = array[0];
         int minElement = array[0];
         int minIndex = 0;
@@ -84,7 +84,7 @@ public class Main {
 
 
     //-----Task 4-----
-    public static void FourthTask(int[] array) {
+    public static void fourthTask(int[] array) {
         int counter = 0;
         for (int element : array) {
             if (element == 0)
@@ -98,7 +98,7 @@ public class Main {
 
 
     //-----Task 5-----
-    public static void FifthTask(int[] array) {
+    public static void fifthTask(int[] array) {
         for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - 1 - i];
@@ -109,7 +109,7 @@ public class Main {
 
 
     //-----Task 6-----
-    public static void SixthTask(int[] array) {
+    public static void sixthTask(int[] array) {
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[i - 1])
                 continue;
@@ -123,7 +123,7 @@ public class Main {
 
 
     //-----Task 7-----
-    public static void SeventhTask(int[] array) {
+    public static void seventhTask(int[] array) {
         array[array.length-1] += 1;
         if(array.length == 1) return;
         for(int i= array.length-1; i >= 0; i--)

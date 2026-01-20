@@ -1,6 +1,5 @@
 package Lesson5;
 
-import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,9 +17,9 @@ public class Main {
                     case 0 -> {
                         return;
                     }
-                    case 1 -> FistTask(sc);
-                    case 2 -> SecondTask();
-                    case 3 -> ThirdTask(sc);
+                    case 1 -> fistTask(sc);
+                    case 2 -> secondTask();
+                    case 3 -> thirdTask(sc);
                     default -> System.out.println("Данного действия нет");
                 }
             }
@@ -28,7 +27,7 @@ public class Main {
     }
 
     //-----Task 1-----
-    public static void FistTask(Scanner sc) {
+    public static void fistTask(Scanner sc) {
         Random random = new Random();
         int height, width, number;
         int sum = 0;
@@ -72,7 +71,7 @@ public class Main {
     }
 
     //-----Task 2-----
-    public static void SecondTask() {
+    public static void secondTask() {
         String[][] matrix = new String[8][8];
 
         System.out.println("Шахматная доска: ");
@@ -102,7 +101,7 @@ public class Main {
     }
 
     //-----Task 3-----
-    public static void ThirdTask(Scanner sc) {
+    public static void thirdTask(Scanner sc) {
         int height, width;
         int counter = 1;
         System.out.println("Введите  размер матрицы");

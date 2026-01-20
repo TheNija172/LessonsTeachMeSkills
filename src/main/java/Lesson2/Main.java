@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            FirstTask(sc);
-            SecondTask(sc);
-            ThirdTask();
-            FourthTask();
-            FifthTask(sc);
+            firstTask(sc);
+            secondTask(sc);
+            thirdTask();
+            fourthTask();
+            fifthTask(sc);
         }
     }
 
     //----------Task 1----------
-    private static void FirstTask(Scanner sc) {
+    private static void firstTask(Scanner sc) {
         System.out.print("Введите число: ");
         while (!sc.hasNextInt()) {
             System.out.print("Повторите ввод значения: ");
@@ -29,7 +29,7 @@ public class Main {
     }
 
     //-----------Task 2-----------
-    private static void SecondTask(Scanner sc) {
+    private static void secondTask(Scanner sc) {
         System.out.print("Введите температуру: ");
 
         while (!sc.hasNextInt()) {
@@ -49,7 +49,7 @@ public class Main {
     }
 
     //------Task 3------
-    private static void ThirdTask() {
+    private static void thirdTask() {
         System.out.print("Квадраты чисел от 10 до 20: ");
         for (int i = 10; i <= 20; i++) {
             System.out.print((i * i) + " ");
@@ -59,7 +59,7 @@ public class Main {
     }
 
     //------Task 4------
-    private static void FourthTask() {
+    private static void fourthTask() {
         System.out.print("Числа от 7 до 98: ");
         for (int i = 7; i < 100; i += 7) {
             System.out.print(i + " ");
@@ -68,7 +68,7 @@ public class Main {
     }
 
     //------Task 5------
-    private static void FifthTask(Scanner sc) {
+    private static void fifthTask(Scanner sc) {
         int value;
         int sum = 0;
         System.out.print("Введите целочисленное число: ");
