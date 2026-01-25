@@ -1,31 +1,19 @@
 package Test;
 
-import java.util.Arrays;
-import java.util.Random;
+/*
+Сделать фигуры разные, у них считать площадь и реализовать интерфейс
+Comparable для сравнения площадей фигур.
+Например, квадрат (S=a*a), прямоугольник (S=a*b),
+треугольник (S = √(p(p - a)(p - b)(p - c)), где p — полу периметр), круг (S = πr²).
+*/
 
 public class Main {
     public static void main(String[] args) {
-        int [][] matrix = new int[4][4];
-        Random random = new Random();
+        Shape circle = new Circle(5);
+        Shape triangle = new Triangle(2, 3, 4);
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = i;
-            }
-            System.out.println(Arrays.toString(matrix[i]));
-        }
-
-        System.out.println();
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j != i; j++) {
-                int temp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = temp;
-            }
-        }
-
-        for (int i = 0; i < matrix.length; i++) {
-            System.out.println(Arrays.toString(matrix[i]));
-        }
+        System.out.println("Площадь круга: " + circle.getArea());
+        System.out.println("Площадь треугольника: " + triangle.getArea());
+        System.out.println(circle.compareTo(triangle));
     }
 }
