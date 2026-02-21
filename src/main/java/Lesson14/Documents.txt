@@ -1,0 +1,16 @@
+docnumABC123456
+contractZX987654
+docnumA1B2C3D4E
+contract123ABC45
+docnum123456789
+contractABCDE123
+docnumSHORT1
+contractTOOLONG1234567
+abcnum123456789
+contract_ABC1234
+docnum12345
+contractABCDE12
+docnumABCDE1234
+contractABC12345
+DOCNUMabc123456
+docnum12345!!!!

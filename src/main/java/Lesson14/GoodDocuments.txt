@@ -1,0 +1,5 @@
+docnumABC123456
+docnumA1B2C3D4E
+docnum123456789
+contractABCDE12
+docnumABCDE1234
