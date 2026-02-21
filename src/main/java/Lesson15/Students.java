@@ -22,13 +22,15 @@ public class Students {
     public void transferStudents() {
         students.removeIf(student -> student.getGpa() < 3);
 
-        for (Student student: students) {
-                student.setCourse(student.getCourse()+1);
+        for (Student student : students) {
+            student.setCourse(student.getCourse() + 1);
         }
     }
 
     public void printStudents(int course) {
-        students.forEach(student -> {if(student.getCourse() == course) System.out.print(student);});
+        students.forEach(student -> {
+            if (student.getCourse() == course) System.out.print(student);
+        });
     }
 
     @Override
