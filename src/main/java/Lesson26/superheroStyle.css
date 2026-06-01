@@ -1,0 +1,36 @@
+h1 {
+    line-height: 1%;
+    color: #e82828;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+body {
+    background: #474747;
+    color: #e1e1e1;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+
+mark {
+    background-color: #8e4e1c;
+    color: #700000;
+    font-style: oblique;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
